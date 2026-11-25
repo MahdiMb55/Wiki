@@ -1,0 +1,14 @@
+# Cargo builds, the packaged app, and downloaded speech files
+/target/
+
+# Local editor settings
+/.idea/
+/.vs/
+/.vscode/
+*.suo
+*.user
+
+# File manager metadata
+.DS_Store
+Desktop.ini
+Thumbs.db
