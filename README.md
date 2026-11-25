@@ -6,6 +6,10 @@
 
 Say **Hey Wiki** to open a favorite site, search Google in Chrome, or switch apps with your voice. Wiki is a voice assistant for 64-bit Windows 10 and 11. It hangs out in the system tray and recognizes English speech on your computer.
 
+## Download Wiki
+
+For a published version, download `wiki-windows-x64.zip` from GitHub Releases, extract it, and open `wiki.exe` in the extracted `wiki-app` folder. Keep the files in that folder together.
+
 ## Build and run
 
 You'll need the 64-bit Rust MSVC toolchain and Visual Studio Build Tools with the Windows SDK. Open PowerShell in the project folder and run both commands.
@@ -47,4 +51,13 @@ Run the regular test suite from the project folder.
 
 ```powershell
 cargo test --locked
+```
+
+## Publish a Windows release
+
+Push a tag like `v0.1.0` on a commit that includes the release workflow. GitHub Actions runs the tests, builds Wiki, and publishes the Windows ZIP as a release asset.
+
+```powershell
+git tag v0.1.0
+git push origin v0.1.0
 ```
